@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Google 2.0</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <script>
+      function search() {
+        let search = document.getElementById("search").value;
+
+        switch (search) {
+          case "ql":
+            document.getElementById("submit").href = "https://quizlet.com/live";
+            break;
+          case "bl":
+            document.getElementById("submit").href =
+              "https://dashboard.blooket.com/my-sets";
+            break;
+          case "black hole":
+            document.getElementById("submit").href =
+              "https://www.google.com/search?q=black+hole&rlz=1CASFKO_enUS1020&oq=b&aqs=chrome.1.69i60j69i59j69i57j69i59l2j69i60l3.2896j0j7&sourceid=chrome&ie=UTF-8&safe=active&ssui=on";
+            break;
+          default:
+            document.getElementById("error").innerHTML = "ERROR";
+            document.getElementById("error").style.backgroundColor = "red";
+            document.getElementById("error").style.color = "black";
+            document.getElementById("search").value = "";
+            setTimeout(() => {}, 5);
+        }
+      }
+    </script>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <h1>Google 2.0</h1>
+
+    <input
+      id="search"
+      type="text"
+      name="search"
+      placeholder="Enter your search"
+    />
+    <br />
+    <a id="submit" href="javascript:search()">
+      search
+    </a>
+    <h1 id="error"></h1>
+  </body>
+</html>
