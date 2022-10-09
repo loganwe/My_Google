@@ -3,34 +3,70 @@
   <head>
     <title>Google 2.0</title>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <link href="style.css" rel="stylesheet" />
+   <link rel="icon" type="image" href="https://freesvg.org/img/1534129544.png">
+    <style>
+    body {
+  color: darkolivegreen;
+  /* background-color: black; */
+  text-align: center;
+  background-image: url("https://blog.hubspot.com/hubfs/image8-2.jpg");
+}
+#search {
+  font-size: 30px;
+}
+a {
+  font-size: 35px;
+  background-color: gray;
+  color: gold;
+}
+h1 {
+  font-size: 40px;
+}</style>
   </head>
   <body>
     <script>
-      function search() {
-        let search = document.getElementById("search").value;
-
-        switch (search) {
-          case "ql":
-            document.getElementById("submit").href = "https://quizlet.com/live";
-            break;
-          case "bl":
-            document.getElementById("submit").href =
-              "https://dashboard.blooket.com/my-sets";
-            break;
-          case "black hole":
-            document.getElementById("submit").href =
-              "https://www.google.com/search?q=black+hole&rlz=1CASFKO_enUS1020&oq=b&aqs=chrome.1.69i60j69i59j69i57j69i59l2j69i60l3.2896j0j7&sourceid=chrome&ie=UTF-8&safe=active&ssui=on";
-            break;
-          default:
-            document.getElementById("error").innerHTML = "ERROR";
-            document.getElementById("error").style.backgroundColor = "red";
-            document.getElementById("error").style.color = "black";
-            document.getElementById("search").value = "";
-            setTimeout(() => {}, 5);
-        }
-      }
-    </script>
+    function search() {
+  let search = document.getElementById("search").value;
+  let site = document.getElementById("submit");
+  switch (search) {
+    case "qlive":
+      site.href = "https://quizlet.com/live";
+      break;
+    case "blooket":
+      site.href = "https://dashboard.blooket.com/my-sets";
+      break;
+    case "drive":
+      site.href = "https://drive.google.com/drive/u/0/my-drive";
+      break;
+    case "pschool":
+      site.href = "https://p8uuwp.csb.app/";
+      break;
+    case "gmail":
+      site.href = "https://mail.google.com/mail/u/0/#inbox";
+      break;
+    case "chat":
+      site.href = "https://mail.google.com/chat/u/0/#chat/welcome";
+      break;
+      case "rpschool":
+      site.href="https://sjpowerschool.berrienresa.org/public/home.html";
+      break;
+      case "vault":
+      site.href="https://jgj121.csb.app/";
+      break;
+      case "docs":
+      site.href="https://docs.google.com/document/u/0/?tgif=d";
+      break;
+      case "sites":
+      site.href="https://sites.google.com/new?tab=r3&tgif=d";
+      break;
+    default:
+      site.href =
+        "https://www.google.com/search?q=" +
+        search +
+        "&rlz=1CASFKO_enUS1020&oq=b&aqs=chrome.1.69i60j69i59j69i57j69i59l2j69i60l3.2896j0j7&sourceid=chrome&ie=UTF-8&safe=active&ssui=on";
+  }
+  
+}</script>
     <br />
     <br />
     <br />
@@ -45,7 +81,7 @@
       id="search"
       type="text"
       name="search"
-      placeholder="Enter your search"
+      placeholder="Search here"
     />
     <br />
     <a id="submit" href="javascript:search()">
